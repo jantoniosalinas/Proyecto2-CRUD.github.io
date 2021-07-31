@@ -1,0 +1,41 @@
+.container {
+    flex-grow: 1;
+    margin: 0 auto;
+    position: relative;
+    width: 50%;
+}
+
+
+.notification.is-primary {
+/*    background-color: #00d1b2;
+    color: #fff;*/
+    width: fit-content;
+    display: table-row-group;
+}
+
+
+.media-left:hover {
+    -webkit-transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+
+.main-title {
+    text-decoration: dotted;
+}
+
+.main-title {
+    color: rgb(24, 24, 61);
+    font: italic bold 114px Georgia, Serif;
+    text-shadow: 3px 1px 3px #de59ae, 4px 3px 11px #31c4dc
+}
+
+.content h1:not(:first-child) {
+    margin-top: 0em;
+}
+
+.content h1 {
+    font-size: 3em;
+    margin-bottom: .5em;
+}

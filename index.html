@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./css/crud.css">
+    <title>Proyecto 2 CRUD</title>
+</head>
+<body>
+    <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img src="./images/favicon-1.webp" width="30" height="55">
+          <h1 class="title is-4"> UCAMP Proyecto #2 CRUD</h1>
+        </a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item">José Antonio Salinas Ochoa</a>
+      </div>
+    </nav>
+
+    <div class="box">
+      <article class="media">
+        <div class="media-left">
+          <figure class="image is-128x128">
+            <img src="./images/T-DanceAcademy.png" alt="">
+          </figure>
+        </div>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <h1 class="main-title">T-Dance Academy</h1> <small>@tdanceacademy</small>
+              <br>
+            </p>
+          </div>
+        </div> 
+      </article>
+    </div>   
+  
+    <div id="container" class="container">  
+    <div class="field">
+      <label class="label">Clave</label>
+      <div class="control">
+        <input class="input is-small" type="text" id = "data-clave" name= "data-clave" placeholder="Clave de la clase" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Clase</label>
+      <div class="control">
+        <input class="input is-small" type="text" id = "data-clase" name= "data-clase" placeholder="Nombre de la clase" required>
+      </div>
+    </div>
+    
+    <div class="field">
+      <label class="label">Coreográfo</label>
+      <div class="control">
+        <input class="input is-small" id = "data-coreografo" name = "data-coreografo" type="text" placeholder="Coreografo" required>
+      </div>
+    </div>
+    
+    <div class="field">
+      <label class="label">Alumnos</label>
+      <div class="control">
+        <input class="input is-small" type="number" id = "data-alumnos" name = "data-alumnos" placeholder="Número de alumnos" min = 0  max = 20 required>
+      </div>
+    </div>
+    
+    <div class="field">
+      <label class="label">Detalle</label>
+      <div class="control">
+        <textarea class="input textarea is-small" id="data-detail" name = "data-detail" placeholder="Detalle de la clase" required></textarea>
+      </div>
+    </div>
+    
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-primary is-small" id = "data-save" name="data-save" value="data-save" onclick="save_record(); return false;">Agregar</button>
+      </div>
+      <div class="control">
+        <button class="button is-warning is-small" id = "data-cancel" name ="data-cancel" onclick="clear_form(1); return false;">Cancelar</button>
+      </div>
+      <div class="control">
+        <button class="button is-info is-small" id = "data-show" name ="data-show" onclick="show_data(); return false;">Mostrar Datos</button>
+      </div>
+      <div class="control">
+        <button class="button is-danger is-small" id = "data-clear" name ="data-clear" onclick="clearLocalStorage(); return false;">Eliminar localStorage</button>
+      </div>
+    </div>
+  </div>
+
+  <article class="message">
+    <div class="message-body">
+      <span id="cancelResult"></span>
+    </div>
+  </article>
+
+  <div class="container">
+    <div class="notification is-primary">
+      <span id="saveResult"></span>
+      <div>
+      </div>
+    </div>
+  </div>
+    
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>UCAMP CRUD</strong> by <a href="antonio.salinas@ucamp.utel.edu.mx">José Antonio Salinas Ochoa</a>. <br> This is a website with educational purposes
+          <a href="https://u-camp.utel.edu.mx">UCAMP</a>.
+        </p>
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-home"><img src="./images/home.png" alt=""></i>
+          </span>
+          <a href="#"><span>Home</span></a>
+
+          <span class="icon">
+              <i class="fas fa-home"><img src="./images/linkedin.png" alt=""></i>
+          </span>
+          <a href="#"><span>LinkedIn</span></a>
+          </span>
+          
+          <span class="icon">
+            <i class="fas fa-home"><img src="./images/facebook.png" alt=""></i>
+          </span>
+          <a href="#"><span>Facebook</span></a>
+
+          <span class="icon">
+            <i class="fas fa-home"><img src="./images/instagram.png" alt=""></i>
+          </span>
+          <a href="https://www.instagram.com/jasosalinas/"><span>Instagram</span></a>
+      </div>
+    </footer>      
+
+    <script src="./js/crud.js"></script>
+  </body>
+</body>
+</html>
